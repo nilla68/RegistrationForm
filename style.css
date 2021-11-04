@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+form {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2 rem;
+    font-weight: bold;
+} 
+  
+.input-box small{
+    visibility: hidden;
+    color: red;
+    font-size: small;
+    font-weight: 300;
+}
+
+.input-box.error small {
+	visibility: visible;
+}
+
+.input-box.success small {
+	visibility: hidden;
+}
+
+#btn {
+    font-weight: 700;
+    font-size: 1.2rem;
+}

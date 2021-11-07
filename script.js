@@ -34,21 +34,15 @@ lastname.addEventListener("keyup", (keyboardEvent) => {
 
 email.addEventListener("keyup", (keyboardEvent) => {
   const element = keyboardEvent.target;
-  const regEx =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   validateWithRegEx(element, regEx, "Ange en giltig e-postadress");
   validateFormToSubmit();
 });
 
 password_1.addEventListener("keyup", (keyboardEvent) => {
   const element = keyboardEvent.target;
-  const regEx =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
-  validateWithRegEx(
-    element,
-    regEx,
-    "Måste vara minst 8 tecken samt bestå av: 0-9, a-ö, A-Ö, !@#$%^&*"
-  );
+  const regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+  validateWithRegEx(element, regEx, "Måste vara minst 8 tecken samt bestå av: 0-9, a-ö, A-Ö, !@#$%^&*");
   validatePassword2(element, password_2);
   validateFormToSubmit();
 });
